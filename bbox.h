@@ -3,7 +3,6 @@ struct box {
 	double right;
 	double bottom;
 	double top;
-	// int extroverted;
 };
 
 struct result {

@@ -56,10 +56,6 @@ void array_free(struct array * a) {
 	free(a);
 }
 
-void array_remove_if(struct array * a, int (predicate)(const void *)) {
-
-}
-
 // Overlap for a single box
 
 int overlap(struct box a, struct box b) {
@@ -73,17 +69,18 @@ struct array * buckets[BUCKET_SIZE * NUM_BUCKETS];
 void setup() {
 	static int done = 0;
 	if (!done) {
-		// Create the bucket objjects.
+		// Create the bucket objects.
 		for (int i = 0; i < NUM_BUCKETS; ++i) buckets[i] = array_create(sizeof(int));
 		done = 1;
 	}
 }
 
+double y_offset = (NUM_BUCKETS * BUCKET_SIZE) / 2;
+
 int detect(struct box * boxes, int box_num, struct result * result, int result_limit) {
 	int result_num = 0;
 	if (box_num > 0) {
 		setup();
-		double y_offset = (NUM_BUCKETS * BUCKET_SIZE) / 2;
 		int min_used = NUM_BUCKETS - 1;
 		int max_used = 0;
 		for (int i = 0; i < box_num; ++i) {
@@ -113,7 +110,6 @@ int detect(struct box * boxes, int box_num, struct result * result, int result_l
 						}
 					}
 				}
-				// TODO: Remove things from the bucket if they are no longer relavent.
 			}
 			for (int k = bot; k <= top; ++k) {
 				array_push(buckets[k], &i);
