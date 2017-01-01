@@ -35,10 +35,10 @@ In the future, the library may do this for you.
 
 The function returns a list of tuples. Each tuple contains two integers - the indexes of two rectangles that overlapped.
 
-### Example:
+### Example
 
 ```python
-print(cbboxcollide([
+print(cbbox.collide([
 	(0, 0, 10, 10),
 	(5, 5, 20, 20),
 	(12, 4, 14, 32)
