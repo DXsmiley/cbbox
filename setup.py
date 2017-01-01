@@ -2,7 +2,7 @@ from distutils.core import setup, Extension
 
 setup(
 	name = 'cbbox',
-	version = '0.0.1',
+	version = '0.0.2',
 	description = 'C extention to check bounding box overlaps',
 	author = 'DXsmiley',
 	setup_requires=["cffi>=1.0.0"],
