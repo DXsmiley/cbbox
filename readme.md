@@ -6,7 +6,7 @@ A library to check whether axis-aligned bounding boxes are overlapping.
 
 ## Installation
 
-	pip install (TODO) --upgrade
+	pip install https://github.com/DXsmiley/cbbox/archive/master.zip --upgrade
 
 ## Usage
 
