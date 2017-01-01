@@ -64,7 +64,7 @@ int overlap(struct box a, struct box b) {
 
 // Implementation of the spacial hash.
 
-struct array * buckets[BUCKET_SIZE * NUM_BUCKETS];
+struct array * buckets[NUM_BUCKETS];
 
 void setup() {
 	static int done = 0;
