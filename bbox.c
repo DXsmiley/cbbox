@@ -103,8 +103,8 @@ int detect(struct box * boxes, int box_num, struct result * result, int result_l
 				for (int c = 0; c < new_size; ++c) {
 					if (overlap(boxes[i], boxes[contents[c]])) {
 						if (result_num < result_limit) {
-							result[result_num].first = i;
-							result[result_num].second = contents[c];
+							result[result_num].first = contents[c];
+							result[result_num].second = i;
 						}
 						result_num++;
 					}

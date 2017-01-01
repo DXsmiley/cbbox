@@ -33,7 +33,7 @@ In the future, the library may do this for you.
 
 #### Return value
 
-The function returns a list of tuples. Each tuple contains two integers - the indexes of two rectangles that overlapped.
+The function returns a list of tuples. Each tuple contains two integers - the indexes of two rectangles that overlapped. The first index will be less than the second one.
 
 ### Example
 
