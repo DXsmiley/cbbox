@@ -102,12 +102,11 @@ int detect(struct box * boxes, int box_num, struct result * result, int result_l
 				// Look at the contents of the bucket and see what it overlaps with.
 				for (int c = 0; c < new_size; ++c) {
 					if (overlap(boxes[i], boxes[contents[c]])) {
-						// TODO: Produce some kind of warning if the limit is hit.
-						if (result_num != result_limit) {
+						if (result_num < result_limit) {
 							result[result_num].first = i;
 							result[result_num].second = contents[c];
-							result_num++;
 						}
+						result_num++;
 					}
 				}
 			}
