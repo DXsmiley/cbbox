@@ -3,7 +3,7 @@ from _bbox import ffi, lib
 
 buffer_in_size = 1
 buffer_in = ffi.new("struct box[]", buffer_in_size)
-buffer_out_size = 512
+buffer_out_size = 1
 buffer_out = ffi.new("struct result[]", buffer_out_size)
 
 
